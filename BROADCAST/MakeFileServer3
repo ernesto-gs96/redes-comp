@@ -1,0 +1,11 @@
+server3: PaqueteDatagrama.o SocketDatagrama.o  server3.cpp mongoose.c
+	g++ PaqueteDatagrama.o SocketDatagrama.o mongoose.c server3.cpp -o server3 -lpthread
+
+SocketDatagrama.o: SocketDatagrama.cpp
+	g++ -c SocketDatagrama.cpp
+
+PaqueteDatagrama.o: PaqueteDatagrama.cpp
+	g++ -c PaqueteDatagrama.cpp
+
+clean:
+	rm -rf *.o server

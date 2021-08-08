@@ -1,0 +1,29 @@
+Compilar Todos los archivos
+
+    Correr en terminal
+    $ make compile
+
+
+RECEPTOR
+
+-El Receptor puede ser ejecutado en muchas termianles o computadoras
+-Al ejecutarse se une a grupo que se identifica con la IP asignada.
+-Recibe dos enteros del emisor
+-Responde con la suma de los enreros recibidos
+
+    Correr en terminal
+    $ ./receptor <ip> <puerto>
+
+EMISOR
+
+-El emisor se ejecuta en una terminal a parte.
+-Manda dos enteros al los receptores que están conectados en el grupo.
+-Reibe la suma y direccion ip de los receptores que le responden.
+
+    Correr en terminal
+    $ ./emisor <ip> <puerto> <ttl> <depositos> <numero_receptores>
+
+
+NOTA:
+    Puerto : asignar los puertos distintos a 7200
+    La IP es de multicast solo pueden tomar valores de 224.0.0.0 hasta la 239.255.255.255
